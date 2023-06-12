@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assess Student Work</title>
+</head>
+<body>
+    <h1>Assess Student Work</h1>
+    <form method="post" action="{% url 'assess_student_work' %}">
+        {% csrf_token %}
+        <label for="rubric">Rubric:</label><br>
+        <textarea name="rubric" rows="5" cols="50"></textarea><br><br>
+
+        <label for="student_work">Student Work:</label><br>
+        <textarea name="student_work" rows="10" cols="50"></textarea><br><br>
+
+        <label for="rubric_scores">Rubric Scores:</label><br>
+        <textarea name="rubric_scores" rows="5" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Assess">
+    </form>
+</body>
+</html>
